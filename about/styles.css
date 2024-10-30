@@ -37,36 +37,15 @@ body{
 .intro{
     background-color: hsl(0, 0%, 20%);
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: fit-content;
     padding: 20px;
-}
-.intro .intro-main{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-.intro .intro-main h1{
     color: hsl(0, 0%, 100%);
-    font-size: 48px;
-    font-weight: 900;
-}
-.intro .intro-main em{
-    color: hsl(0, 0%, 100%);
-    font-size: 18px;   
-}
-.intro .intro-main button{
-    padding: 10px;
-    border-radius: 20px;
-    background-color: hsl(75, 94%, 57%);
-    color: hsl(0, 0%, 20%);
-}
-.intro .intro-pic img{
-    height: 200px;
-    width: 300px;
-    border-radius: 30px;
+    border: 1px solid hsl(75, 94%, 57%);
+    gap: 20px;
 }
 
 .display{
@@ -108,53 +87,44 @@ body{
     margin: 20px;
 }
 
-.quote{
+.display-awards{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     flex-direction: column;
-    gap: 10px;
-    padding: 30px;
-    color: hsl(0, 0%, 20%);
-    background-color: hsl(0, 0%, 78%);
-}
-.quote em{
-    font-size: 32px;
-}
-.quote strong{
-    font-size: 24px;
-}
-
-.call-container{
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
-.call-container .call{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
     background-color: hsl(0, 0%, 20%);
-    padding: 20px;
-    border-radius: 20px;
     color: hsl(0, 0%, 100%);
 }
-.call-container .call .call-info{
+.display-awards .display-projects{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+.display-awards .display-projects figure{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-.call-container .call .call-btn button{
-    background-color: hsl(0, 0%, 20%);
-    color: hsl(75, 94%, 57%);
-    border: 2px solid hsl(75, 94%, 57%);
+    gap: 20px;
+    border: 2px solid hsl(0, 0%, 20%);
     border-radius: 20px;
-    width: auto;
-    padding: 10px;
+    height: fit-content;
+    width: 400px;
+    padding: 20px;
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 20%);
+}
+.display-awards .display-projects figure img{
+    width: 200px;
+    height: fit-content;
+    border-radius: 10px;
+}
+.display-awards .display-projects figcaption{
+    margin: 20px;
 }
 
 footer{
@@ -177,30 +147,14 @@ footer{
     }
     
     .intro {
-        flex-direction: column;
-        text-align: center;
         padding: 30px 15px;
+        text-align: center;
     }
     
-    .intro .intro-main h1 {
-        font-size: 36px;
-    }
-    
-    .intro .intro-pic img {
-        width: 250px;
-        height: auto;
-    }
-    
-    .display .display-projects figure {
+    .display .display-projects figure,
+    .display-awards .display-projects figure {
         width: 90%;
         max-width: 350px;
-    }
-    
-    .call-container .call {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        padding: 30px 15px;
     }
 }
 
@@ -216,23 +170,14 @@ footer{
         gap: 15px;
     }
     
-    .intro .intro-main h1 {
-        font-size: 28px;
+    .display .display-projects figure img,
+    .display-awards .display-projects figure img {
+        width: 150px;
     }
     
-    .intro .intro-main em {
-        font-size: 16px;
-    }
-    
-    .intro .intro-pic img {
-        width: 200px;
-    }
-    
-    .quote em {
-        font-size: 24px;
-    }
-    
-    .quote strong {
-        font-size: 18px;
+    .display .display-projects figcaption,
+    .display-awards .display-projects figcaption {
+        margin: 10px;
+        text-align: center;
     }
 }
